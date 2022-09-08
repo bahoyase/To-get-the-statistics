@@ -1,0 +1,17 @@
+import time
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+driver = webdriver.Edge()
+driver.get('http://tcfa.top/real/')
+wait = WebDriverWait(driver, 9)
+driver.find_element_by_class_name("btn").click()
+wait = WebDriverWait(driver, 20)
+driver.find_element_by_name("username").send_keys("zhanghao")
+driver.find_element_by_name("password").send_keys("Mima")
+driver.find_element_by_class_name("btn").click()
+driver.get('http://tcfa.top/real/')
+driver.find_element_by_id("add").send_keys("didian")
+driver.find_element_by_id("btn").click()
